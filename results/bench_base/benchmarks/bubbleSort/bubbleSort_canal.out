@@ -1,0 +1,14 @@
+==== getting cache stats for benchmarks/bubbleSort's main.bc ====
+SET_NUM: 4
+OFFSET_NUM: 64
+WAY_NUM: 4
+Total Length: 16
+===============STAT================
+Total memory access: 11028902
+Total memeory load: 9186189
+Total CSIM_Load hit: 9119629
+Total CSIM_Load miss: 66560
+Total memory store: 1842713
+Total CSIM_Store hit: 1841848
+Total CSIM_Store miss: 865
+==== Done ====

@@ -1,0 +1,29 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Feb 12 2018 23:29:21
+gem5 started May 30 2018 10:28:26
+gem5 executing on ubuntu, pid 7244
+command line: build/X86/gem5.opt configs/example/se.py -c tests/test-progs/ourTest/base_gem5 --caches --l1d_size=1kB --l1d_assoc=4 --num-cpus=1 --cacheline_size=64 --num-l2caches=0 --num-l3caches=0
+
+Global frequency set at 1000000000000 ticks per second
+**** REAL SIMULATION ****
+Exiting @ tick 85906000 because exiting with last active thread context
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Feb 12 2018 23:29:21
+gem5 started May 30 2018 10:28:26
+gem5 executing on ubuntu, pid 7247
+command line: build/X86/gem5.opt configs/example/se.py -c tests/test-progs/ourTest/test_gem5 --caches --l1d_size=1kB --l1d_assoc=4 --num-cpus=1 --cacheline_size=64 --num-l2caches=0 --num-l3caches=0
+
+Global frequency set at 1000000000000 ticks per second
+**** REAL SIMULATION ****
+Exiting @ tick 86995500 because exiting with last active thread context
+system.cpu.dcache.overall_accesses::total             580
+system.cpu.dcache.ReadReq_accesses::total             440
+system.cpu.dcache.ReadReq_hits::total             332
+system.cpu.dcache.ReadReq_misses::total             108
+system.cpu.dcache.WriteReq_accesses::total             140
+system.cpu.dcache.WriteReq_hits::total             129
+system.cpu.dcache.WriteReq_misses::total             11

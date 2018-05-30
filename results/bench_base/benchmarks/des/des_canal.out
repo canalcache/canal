@@ -1,0 +1,18 @@
+==== getting cache stats for benchmarks/des's main.bc ====
+SET_NUM: 4
+OFFSET_NUM: 64
+WAY_NUM: 4
+Total Length: 16
+SET_NUM: 4
+OFFSET_NUM: 64
+WAY_NUM: 4
+Total Length: 16
+===============STAT================
+Total memory access: 580
+Total memeory load: 440
+Total CSIM_Load hit: 332
+Total CSIM_Load miss: 108
+Total memory store: 140
+Total CSIM_Store hit: 129
+Total CSIM_Store miss: 11
+==== Done ====
