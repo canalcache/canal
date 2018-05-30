@@ -10,7 +10,7 @@ BENCHDIR=$1
 
 cd $BENCHDIR
 
-../../../../bin/canal.sh --orig-file base_main.c --verify-file main.c --cache-line-size 64 --cache-size 1 --cache-assoc 4 --llvm-version 3.4 -I/home/gpsim/klee/include
+../../../../bin/canal.sh --orig-file base_main.c --verify-file main.c --cache-line-size 64 --cache-size 1 --cache-assoc 4 --llvm-version 3.4 -I /home/gpsim/klee/include
 
 echo "==============  Done =============="
 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC   -shared  -o libapiInsert.so CMakeFiles/apiInsert.dir/main.cpp.o 

@@ -10,6 +10,6 @@ cd $BENCHDIR
 
 SMACK_CONF="--unroll 10 -v --time-limit 3600"
 
-$TIME -o run_smack.time smack main.bc ${SMACK_CONF} > smack_results.txt
+$TIME -o run_smack.time smack main.bc ${SMACK_CONF} > smack_results.out
 
 cd ../..

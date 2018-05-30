@@ -2,8 +2,18 @@
 
 BIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-INC="-I/home/gpsim/smack/share/smack/include -I/home/gpsim/klee/include"
+#INC="-I/home/gpsim/smack/share/smack/include -I/home/gpsim/klee/include"
 INC=""
+
+USAGE=$'Usage: ./canal.sh --orig-file [original file] --verify-file [verifiable file] --llvm-version [3.4 or 3.8] [other options...]
+==== options ====
+--orig-file <original file> : to get a symbol table
+--verify-file <verifiable file> : the file where Canal functions are variables are used
+-I <include path>
+-o <output> : the name of output file
+--cache-line-size <N> : the cache line size in bytes (default 64)
+--cache-assoc <N> : the number of ways in the cache (default 4)
+--cache-size <N> : the total size of cache in KB (default 1)'
 
 source $BIN_DIR/common.sh
 
@@ -14,18 +24,11 @@ do
 
 	case $key in
         -h | --help)
-            echo "Usage: ./canal.sh --orig-file [original file] --verify-file [verifiable file] --llvm-version [3.4 or 3.8] [other options..]"
-            echo "==== options ===="
-            echo " --orig-file [original file] : to get a symbol table"
-            echo " --verify-file [verifiable file] : the file where Canal functions are variables are used"
-            echo "-o [output] : the name of output file"
-            echo "--cache-line-size [B] : the cache line size in bytes (default 64)"
-            echo "--cache-assoc [] : the number of ways in the cache (default 4)"
-            echo "--cache-size [KB] : the total size of cache in KB (default 1)"
+			echo "$USAGE"
             exit 0
             ;;
         -I)
-            INC="$2"
+            INC="-I$2"
             shift # past argument
             shift # past value
             ;;
@@ -80,17 +83,17 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 # make sure we have what we need
 if [[ -z $ORIG_FILE ]]; then
 	echo "Error: original file not specified";
-    echo "Type -h"
+    echo "$USAGE"
 	exit 1
 fi
 if [[ -z $VERIFY_FILE ]]; then
 	echo "Error: no verify file specified"
-    echo "Type -h"
+    echo "$USAGE"
 	exit 1
 fi
 if [[ -z $LLVM_VERSION ]]; then
 	echo "Error: no llvm version specified"
-    echo "Type -h"
+    echo "$USAGE"
 	exit 1
 fi
 
