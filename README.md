@@ -4,7 +4,7 @@
  - CANAL produces LLVM-bitcode which can be ran as a simulator or verified with LLVM-based verification tools.
 
 
-## Contributor
+## Contributors
  - Chungha Sung (chunghas[@]usc[dot]edu)
  - Brandon Paulson (bpaulsen[@]usc[dot]edu)
  - Chao Wang (wang626[@]usc[dot]edu)
