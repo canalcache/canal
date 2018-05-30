@@ -1,0 +1,5 @@
+/home/gpsim/canal/src/build/CMakeFiles/edit_cache.dir
+/home/gpsim/canal/src/build/CMakeFiles/rebuild_cache.dir
+/home/gpsim/canal/src/build/apiInsertion/CMakeFiles/edit_cache.dir
+/home/gpsim/canal/src/build/apiInsertion/CMakeFiles/rebuild_cache.dir
+/home/gpsim/canal/src/build/apiInsertion/CMakeFiles/apiInsert.dir
