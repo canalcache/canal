@@ -1,0 +1,8 @@
+array i1[4] : w32 -> w8 = symbolic
+(query [(Ule N0:(ReadLSB w32 0 i1)
+              5)
+         (Ule (Add w32 1 N0) 5)
+         (Ule (Add w32 2 N0) 5)
+         (Eq false
+             (Ule (Add w32 3 N0) 5))]
+        false)

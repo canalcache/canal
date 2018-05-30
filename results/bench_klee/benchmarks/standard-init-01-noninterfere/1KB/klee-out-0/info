@@ -1,0 +1,3 @@
+/home/gpsim/klee/build/bin/klee -exit-on-error-type=Assert main.bc
+PID: 16642
+Started: 2018-05-30 13:56:49
