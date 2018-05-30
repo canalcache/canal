@@ -53,12 +53,12 @@ int main() {
 
 	__CSIM_init_cache();
 	__CSIM_MAIN__(a);
-	access1 = __CSIM_num;
+	access1 = __CSIM_num_Store_hit + __CSIM_num_Store_miss + __CSIM_num_Load_hit + __CSIM_num_Load_miss;
 	writemiss1 = __CSIM_num_Store_miss;
 
 	__CSIM_init_cache();
 	__CSIM_MAIN__(b);
-	access2 = __CSIM_num;
+	access2 = __CSIM_num_Store_hit + __CSIM_num_Store_miss + __CSIM_num_Load_hit + __CSIM_num_Load_miss;
 	writemiss2 = __CSIM_num_Store_miss;
 
 	assert(access1 == access2);

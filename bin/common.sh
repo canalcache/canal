@@ -106,12 +106,7 @@ print_debug_init() {
 print_init_stat() {
     printf "void __CSIM_init_stat (void)
 {
-    __CSIM_num = 0;
-    __CSIM_num_Load = 0;
-    __CSIM_num_Store = 0;
 
-    __CSIM_num_hit = 0;
-    __CSIM_num_miss = 0;
     __CSIM_num_Load_hit = 0;
     __CSIM_num_Load_miss = 0;
     __CSIM_num_Store_hit = 0;
@@ -129,12 +124,7 @@ print_init_stat() {
 print_init_cache() {
     printf "void __CSIM_init_cache (void)
 {
-    __CSIM_num = 0;
-    __CSIM_num_Load = 0;
-    __CSIM_num_Store = 0;
 
-    __CSIM_num_hit = 0;
-    __CSIM_num_miss = 0;
     __CSIM_num_Load_hit = 0;
     __CSIM_num_Load_miss = 0;
     __CSIM_num_Store_hit = 0;
@@ -224,13 +214,13 @@ print_print_stat() {
     printf "void __CSIM_print_stat(void)
 {
     printf(\"===============STAT================\\\n\");
-    printf(\"Total memory access: %%d\\\n\", __CSIM_num);
+    printf(\"Total memory access: %%d\\\n\", __CSIM_num_Load_hit + __CSIM_num_Load_miss + __CSIM_num_Store_hit + __CSIM_num_Store_miss);
 
-    printf(\"Total memeory load: %%d\\\n\", __CSIM_num_Load);
+    printf(\"Total memeory load: %%d\\\n\", __CSIM_num_Load_hit + __CSIM_num_Load_miss);
     printf(\"Total CSIM_Load hit: %%d\\\n\", __CSIM_num_Load_hit);
     printf(\"Total CSIM_Load miss: %%d\\\n\", __CSIM_num_Load_miss);
 
-    printf(\"Total memory store: %%d\\\n\", __CSIM_num_Store);
+    printf(\"Total memory store: %%d\\\n\", __CSIM_num_Store_hit + __CSIM_num_Store_miss);
     printf(\"Total CSIM_Store hit: %%d\\\n\", __CSIM_num_Store_hit);
     printf(\"Total CSIM_Store miss: %%d\\\n\", __CSIM_num_Store_miss);
 }\n"
@@ -413,12 +403,6 @@ build_header() {
 #define __CSIM_CACHE_MISS false
 #define __CSIM_CACHE_RET bool
 
-unsigned int __CSIM_num;
-unsigned int __CSIM_num_Load;
-unsigned int __CSIM_num_Store;
-
-unsigned int __CSIM_num_hit;
-unsigned int __CSIM_num_miss;
 unsigned int __CSIM_num_Load_hit;
 unsigned int __CSIM_num_Load_miss;
 unsigned int __CSIM_num_Store_hit;
@@ -479,9 +463,6 @@ print_csim_load_store() {
 
 
     printf "
-    /* incremet __CSIM_num and __CSIM_num_${1} */ 
-    __CSIM_num++;
-    __CSIM_num_${1}++; 
     /* check whether there is an element with the same tags*/"
 
     if [ ${1} == "Load" ]; then

@@ -68,13 +68,13 @@ int main() {
 
     __CSIM_init_cache();
     __CSIM_MAIN__(a1, b1, c1, d1);
-	access1 = __CSIM_num;
+	access1 = __CSIM_num_Store_hit + __CSIM_num_Store_miss + __CSIM_num_Load_hit + __CSIM_num_Load_miss;
 	miss1 = __CSIM_num_Store_miss + __CSIM_num_Load_miss;
 
 
     __CSIM_init_cache();
     __CSIM_MAIN__(a2, b2, c2, d2);
-	access2 = __CSIM_num;
+	access2 = __CSIM_num_Store_hit + __CSIM_num_Store_miss + __CSIM_num_Load_hit + __CSIM_num_Load_miss;
 	miss2 = __CSIM_num_Store_miss + __CSIM_num_Load_miss;
 
 	assert(access1 == access2);

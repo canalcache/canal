@@ -88,10 +88,8 @@ void __CSIM_MAIN__()
 
         // omitted assertion check part. Instead, check cache variables.
 
-        __CRAB_assert(__CSIM_num_Store > 1);  // [2, 16]
         __CRAB_assert(__CSIM_num_Store_hit > 1);     // [0, 13]
         __CRAB_assert(__CSIM_num_Store_miss > 1);    // [2, 3]
-        __CRAB_assert(__CSIM_num_Load > 1);   // [6, 27]
         __CRAB_assert(__CSIM_num_Load_hit > 1);      // [6, 27]
         __CRAB_assert(__CSIM_num_Load_miss > 1);     // [0, 0]
 

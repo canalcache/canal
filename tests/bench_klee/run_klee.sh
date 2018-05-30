@@ -7,7 +7,6 @@ BENCHDIR=${1}
 
 cd $BENCHDIR
 
-$TIME -o run_klee.time $KLEE -exit-on-error-type=Assert newFile_afterPass.bc > klee_results.txt
-#$KLEE -exit-on-error-type=Assert newFile_afterPass.bc 
+$TIME -o run_klee.time $KLEE -exit-on-error-type=Assert main.bc > klee_results.txt
 
 cd -

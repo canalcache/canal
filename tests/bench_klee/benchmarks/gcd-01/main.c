@@ -37,13 +37,13 @@ int main()
 	klee_make_symbolic(&y1, sizeof(signed char), "y1");
 	__CSIM_init_cache();
     __CSIM_MAIN__(x1, y1);
-	access1 = __CSIM_num;
+	access1 = __CSIM_num_Store_hit + __CSIM_num_Store_miss + __CSIM_num_Load_hit + __CSIM_num_Load_miss;
 	miss1 = __CSIM_num_Store_miss + __CSIM_num_Load_miss;
 
 	
 	__CSIM_init_cache();
     __CSIM_MAIN__(x2, y2);
-	access2 = __CSIM_num;
+	access2 = __CSIM_num_Store_hit + __CSIM_num_Store_miss + __CSIM_num_Load_hit + __CSIM_num_Load_miss;
 	miss2 = __CSIM_num_Store_miss + __CSIM_num_Load_miss;
 
 	assert(access1 == access2);

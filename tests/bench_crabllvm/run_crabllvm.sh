@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ../../bin/common.sh
+
 CRAB=/home/gpsim/crab-llvm/build/_DIR_/bin/crabllvm
 CRAB_PP=/home/gpsim/crab-llvm/build/_DIR_/bin/crabllvm-pp
 
