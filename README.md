@@ -3,8 +3,6 @@
  - CANAL makes C code cache-verifiable through all kinds of LLVM-based verification tools
  - CANAL produces LLVM-bitcode which can be ran as a simulator or verified with LLVM-based verification tools.
 
-## Main property
-CANAL makes c-code verifiable in terms 
 
 ## Contributor
  - Chungha Sung (chunghas[@]usc[dot]edu)
