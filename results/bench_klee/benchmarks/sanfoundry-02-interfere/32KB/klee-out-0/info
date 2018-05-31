@@ -1,0 +1,21 @@
+/home/gpsim/klee/build/bin/klee -exit-on-error-type=Assert main.bc
+PID: 2514
+Started: 2018-05-31 07:19:42
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2018-05-31 07:19:44
+Elapsed: 00:00:02
+KLEE: done: explored paths = 53
+KLEE: done: avg. constructs per query = 205
+KLEE: done: total queries = 65
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 65
+KLEE: done: query cex = 65
+
+KLEE: done: total instructions = 141627
+KLEE: done: completed paths = 53
+KLEE: done: generated tests = 53

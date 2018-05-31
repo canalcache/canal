@@ -1,0 +1,3 @@
+Error: ASSERTION FAIL: access1 == access2
+Stack: 
+	#000034043 in main ()
