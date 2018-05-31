@@ -1,5 +1,5 @@
 ## Summary
- - Cache Timing Analysis Framework via LLVM transformation (the paper is under submission in ASE 2018)
+ - Cache Timing Analysis Framework via LLVM transformation (the tool demo paper is under submission in the ASE 2018 Tool Demo track)
  - CANAL makes C code cache-verifiable through all kinds of LLVM-based verification tools
  - CANAL produces LLVM-bitcode which can be ran as a simulator or verified with LLVM-based verification tools.
 
