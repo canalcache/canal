@@ -1,0 +1,30 @@
+SMACK program verifier version 1.9.0
+/usr/local/share/smack/lib/smack.c:133:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= UINT_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:139:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= UINT_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:169:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:175:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:205:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULLONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:211:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULLONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:252:5: warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned long)' [-Wimplicit-function-declaration]
+    memset(ret, 0, num * size);
+    ^
+/usr/local/share/smack/lib/smack.c:252:5: note: include the header <string.h> or explicitly provide a declaration for 'memset'
+7 warnings generated.
+Single threaded program detected
+Verifying 2 impls
+LB: Took 0.86 s
+Verifying program while tracking: {assertsPassed}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.2055}
