@@ -22,8 +22,6 @@
  - Then, ``cmake ../`` and ``make`` to build (under assumption cmake and llvm are installed)
  - Or, by running ``buildPass.sh`` under each bench directory you can build CANAL.
 
-## Download VM
- - We provide a VM with all programs tested in the paper installed at the link (...)
-
-## Description Video
+## Helpful links
  - Simple introduction and description of CANAL on Youtube (https://youtu.be/JDou3F1j2nY)
+ - We provide a VM with all programs tested in the paper installed at the link (...)
