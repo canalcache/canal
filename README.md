@@ -26,4 +26,4 @@
  - We provide a VM with all programs tested in the paper installed at the link (...)
 
 ## Description Video
- - Simple introduction and description of CANAL at the link (...)
+ - Simple introduction and description of CANAL on Youtube (https://youtu.be/JDou3F1j2nY)
