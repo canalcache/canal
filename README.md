@@ -12,9 +12,9 @@
 
 ## Depednecy
  - It has been tested under Clang/LLVM 3.4.0 and 3.8.0
- - (optional) Klee (https://klee.github.io/)
+ - (optional) KLEE (https://klee.github.io/)
  - (optional) SMACK (https://github.com/smackers/smack)
- - (optional) crab-llvm (https://github.com/seahorn/crab-llvm)
+ - (optional) Crab-llvm (https://github.com/seahorn/crab-llvm)
 
 ## Build
  - Change environment paths appropriately for the test (check bin/common.sh)
