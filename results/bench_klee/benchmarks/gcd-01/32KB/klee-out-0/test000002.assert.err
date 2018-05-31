@@ -1,3 +1,0 @@
-Error: ASSERTION FAIL: access1 == access2
-Stack: 
-	#000067603 in main ()

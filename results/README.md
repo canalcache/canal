@@ -1,1 +1,1 @@
-Results files are stored as appear in the paper
+Compressed file for Result files as appear in the paper

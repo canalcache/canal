@@ -1,9 +1,0 @@
-array x1[1] : w32 -> w8 = symbolic
-array y1[1] : w32 -> w8 = symbolic
-(query [(Slt 0
-              N0:(SExt w32 (Read w8 0 y1)))
-         (Eq 0
-             (SRem w32 N1:(SExt w32 (Read w8 0 x1))
-                       N0))
-         (Eq false (Slt N1 0))]
-        false)
