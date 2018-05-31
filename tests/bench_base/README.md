@@ -10,7 +10,7 @@ It may not work under different specification due to cache flush operations & ca
 - set environment variables in export.sh
 
 * How to run?
-./buildPass.sh : it builds the pass
-./get_nubmer_gem5.sh DIR : get numbers using gem5
-./single_run.sh DIR : instrument the code with our pass
-./get_number_ours.sh DIR : get number using our tool
+- ./buildPass.sh : it builds the pass
+- ./get_nubmer_gem5.sh DIR : get numbers using gem5
+- ./single_run.sh DIR : instrument the code with our pass
+- ./get_number_ours.sh DIR : get number using our tool

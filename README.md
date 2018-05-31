@@ -1,5 +1,5 @@
 ## Summary
- - Cache Timing Analysis Framework via LLVM transformation (the paper is under submission in ASE 2018)
+ - Cache Timing Analysis Framework via LLVM transformation (the tool demo paper is under submission in the ASE 2018 Tool Demo track)
  - CANAL makes C code cache-verifiable through all kinds of LLVM-based verification tools
  - CANAL produces LLVM-bitcode which can be ran as a simulator or verified with LLVM-based verification tools.
 
@@ -12,9 +12,9 @@
 
 ## Depednecy
  - It has been tested under Clang/LLVM 3.4.0 and 3.8.0
- - (optional) Klee (https://klee.github.io/)
+ - (optional) KLEE (https://klee.github.io/)
  - (optional) SMACK (https://github.com/smackers/smack)
- - (optional) crab-llvm (https://github.com/seahorn/crab-llvm)
+ - (optional) Crab-llvm (https://github.com/seahorn/crab-llvm)
 
 ## Build
  - Change environment paths appropriately for the test (check bin/common.sh)
