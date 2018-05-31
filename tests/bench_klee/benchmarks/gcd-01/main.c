@@ -10,9 +10,14 @@
 #include "klee/klee.h"
 
 signed char t __attribute__ ((aligned (64)));
+signed char x __attribute__ ((aligned (64)));
+signed char y __attribute__ ((aligned (64)));
 
-void __CSIM_MAIN__(signed char x, signed char y)
+void __CSIM_MAIN__(signed char xt, signed char yt)
 {
+    x = xt;
+    y = yt;
+
     if (y > 0 && x % y == 0) {
         //g = gcd_test(x, y);
         if (x < 0) x = -x;

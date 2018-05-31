@@ -16,7 +16,7 @@
 
 #define N 10
 
-int a[200] __attribute__ ((aligned (64)));
+int k[200] __attribute__ ((aligned (64)));
 int i __attribute__ ((aligned (64)));
 int multi __attribute__ ((aligned (64)));
 
@@ -27,9 +27,9 @@ void __CSIM_MAIN__()
     i = 0;
     while ( i < N ) {
         //if (nd()) {
-            a[i] = 42;
+            k[i] = 42;
         //} else {
-            a[i*16] = 42;
+            k[i*16] = 42;
         //}
         //a[i] = 42;
         i = i + 1;

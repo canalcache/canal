@@ -1,0 +1,144 @@
+SMACK program verifier version 1.9.0
+/usr/local/share/smack/lib/smack.c:133:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= UINT_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:139:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= UINT_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:169:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:175:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:205:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULLONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:211:23: warning: comparison of unsigned expression >= 0 is always true [-Wtautological-compare]
+  __VERIFIER_assume(x >= 0 && x <= ULLONG_MAX);
+                    ~ ^  ~
+/usr/local/share/smack/lib/smack.c:252:5: warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned long)' [-Wimplicit-function-declaration]
+    memset(ret, 0, num * size);
+    ^
+/usr/local/share/smack/lib/smack.c:252:5: note: include the header <string.h> or explicitly provide a declaration for 'memset'
+7 warnings generated.
+Single threaded program detected
+LB: Took 0.26 s
+Verifying program while tracking: {assertsPassed}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50, $M.53}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50, $M.53, $M.52}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50, $M.53, $M.52, $M.51}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50, $M.53, $M.52, $M.51, $M.38}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50, $M.53, $M.52, $M.51, $M.38, $M.41}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50, $M.53, $M.52, $M.51, $M.38, $M.41, $M.40}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, $M.50, $M.53, $M.52, $M.51, $M.38, $M.41, $M.40, $M.39}
+Program has a potential bug: True bug
+/usr/local/share/smack/lib/smack.c(40,1): error PF5001: This assertion can fail
+
+Execution trace:
+/usr/local/share/smack/lib/smack.c(1782,3): Trace: Thread=1  (CALL $initialize, CALL __SMACK_static_init, __CSIM_num_Load_hit = 0, __CSIM_num_Load_miss = 0, __CSIM_num_Store_hit = 0, __CSIM_num_Store_miss = 0, __CSIM_Load_ret = 0, __CSIM_Store_ret = 0, __CSIM_cLine00_tags = 0, __CSIM_cLine01_tags = 0, __CSIM_cLine02_tags = 0, __CSIM_cLine03_tags = 0, __CSIM_cLine10_tags = 0, __CSIM_cLine11_tags = 0, __CSIM_cLine12_tags = 0, __CSIM_cLine13_tags = 0, __CSIM_cLine20_tags = 0, __CSIM_cLine21_tags = 0, __CSIM_cLine22_tags = 0, __CSIM_cLine23_tags = 0, __CSIM_cLine30_tags = 0, __CSIM_cLine31_tags = 0, __CSIM_cLine32_tags = 0, __CSIM_cLine33_tags = 0, __CSIM_cLine00_rank = 0, __CSIM_cLine01_rank = 0, __CSIM_cLine02_rank = 0, __CSIM_cLine03_rank = 0, __CSIM_cLine10_rank = 0, __CSIM_cLine11_rank = 0, __CSIM_cLine12_rank = 0, __CSIM_cLine13_rank = 0, __CSIM_cLine20_rank = 0, __CSIM_cLine21_rank = 0, __CSIM_cLine22_rank = 0, __CSIM_cLine23_rank = 0, __CSIM_cLine30_rank = 0, __CSIM_cLine31_rank = 0, __CSIM_cLine32_rank = 0, __CSIM_cLine33_rank = 0, __CSIM_cLine00_taken = 0, __CSIM_cLine01_taken = 0, __CSIM_cLine02_taken = 0, __CSIM_cLine03_taken = 0, __CSIM_cLine10_taken = 0, __CSIM_cLine11_taken = 0, __CSIM_cLine12_taken = 0, __CSIM_cLine13_taken = 0, __CSIM_cLine20_taken = 0, __CSIM_cLine21_taken = 0, __CSIM_cLine22_taken = 0, __CSIM_cLine23_taken = 0, __CSIM_cLine30_taken = 0, __CSIM_cLine31_taken = 0, __CSIM_cLine32_taken = 0, __CSIM_cLine33_taken = 0, __CSIM_cLine00_dirty = 0, __CSIM_cLine01_dirty = 0, __CSIM_cLine02_dirty = 0, __CSIM_cLine03_dirty = 0, __CSIM_cLine10_dirty = 0, __CSIM_cLine11_dirty = 0, __CSIM_cLine12_dirty = 0, __CSIM_cLine13_dirty = 0, __CSIM_cLine20_dirty = 0, __CSIM_cLine21_dirty = 0, __CSIM_cLine22_dirty = 0, __CSIM_cLine23_dirty = 0, __CSIM_cLine30_dirty = 0, __CSIM_cLine31_dirty = 0, __CSIM_cLine32_dirty = 0, __CSIM_cLine33_dirty = 0, x = 0, y = 0, t = 0, RETURN from __SMACK_static_init , CALL __SMACK_init_func_memory_model)
+/usr/local/share/smack/lib/smack.c(1782,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(1787,1): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (RETURN from __SMACK_init_func_memory_model , RETURN from $initialize , smack:entry:main = -95891, CALL __CSIM_MAIN__, CALL __CSIM_init_cache, __CSIM_num_Load_hit = 0, __CSIM_num_Load_miss = 0, __CSIM_num_Store_hit = 0, __CSIM_num_Store_miss = 0, __CSIM_Load_ret = 0, __CSIM_Store_ret = 0, __CSIM_cLine00_tags = 0, __CSIM_cLine01_tags = 0, __CSIM_cLine02_tags = 0, __CSIM_cLine03_tags = 0, __CSIM_cLine10_tags = 0, __CSIM_cLine11_tags = 0, __CSIM_cLine12_tags = 0, __CSIM_cLine13_tags = 0, __CSIM_cLine20_tags = 0, __CSIM_cLine21_tags = 0, __CSIM_cLine22_tags = 0, __CSIM_cLine23_tags = 0, __CSIM_cLine30_tags = 0, __CSIM_cLine31_tags = 0, __CSIM_cLine32_tags = 0, __CSIM_cLine33_tags = 0, __CSIM_cLine00_rank = 0, __CSIM_cLine01_rank = 0, __CSIM_cLine02_rank = 0, __CSIM_cLine03_rank = 0, __CSIM_cLine10_rank = 0, __CSIM_cLine11_rank = 0, __CSIM_cLine12_rank = 0, __CSIM_cLine13_rank = 0, __CSIM_cLine20_rank = 0, __CSIM_cLine21_rank = 0, __CSIM_cLine22_rank = 0, __CSIM_cLine23_rank = 0, __CSIM_cLine30_rank = 0, __CSIM_cLine31_rank = 0, __CSIM_cLine32_rank = 0, __CSIM_cLine33_rank = 0, __CSIM_cLine00_taken = 0, __CSIM_cLine01_taken = 0, __CSIM_cLine02_taken = 0, __CSIM_cLine03_taken = 0, __CSIM_cLine10_taken = 0, __CSIM_cLine11_taken = 0, __CSIM_cLine12_taken = 0, __CSIM_cLine13_taken = 0, __CSIM_cLine20_taken = 0, __CSIM_cLine21_taken = 0, __CSIM_cLine22_taken = 0, __CSIM_cLine23_taken = 0, __CSIM_cLine30_taken = 0, __CSIM_cLine31_taken = 0, __CSIM_cLine32_taken = 0, __CSIM_cLine33_taken = 0, __CSIM_cLine00_dirty = 0, __CSIM_cLine01_dirty = 0, __CSIM_cLine02_dirty = 0, __CSIM_cLine03_dirty = 0, __CSIM_cLine10_dirty = 0, __CSIM_cLine11_dirty = 0, __CSIM_cLine12_dirty = 0, __CSIM_cLine13_dirty = 0, __CSIM_cLine20_dirty = 0, __CSIM_cLine21_dirty = 0, __CSIM_cLine22_dirty = 0, __CSIM_cLine23_dirty = 0, __CSIM_cLine30_dirty = 0, __CSIM_cLine31_dirty = 0, __CSIM_cLine32_dirty = 0, __CSIM_cLine33_dirty = 0, RETURN from __CSIM_init_cache , CALL __VERIFIER_nondet_char)
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (smack:ext:__SMACK_nondet_char = -128)
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (x = -128)
+/usr/local/share/smack/lib/smack.c(73,21): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,23): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,39): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,41): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (CALL __VERIFIER_assume)
+/usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(34,21): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(35,1): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (RETURN from __VERIFIER_assume )
+/usr/local/share/smack/lib/smack.c(74,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (RETURN from __VERIFIER_nondet_char , smack:ext:__VERIFIER_nondet_char = -128, x = -128, CALL __CSIM_Store, __CSIM_cLine30_rank = 1, __CSIM_cLine31_rank = 1, __CSIM_cLine32_rank = 1, __CSIM_cLine33_rank = 1, __CSIM_num_Store_miss = 1, __CSIM_Store_ret = 0, __CSIM_cLine30_taken = 1, __CSIM_cLine30_tags = 24592, __CSIM_cLine30_rank = 0, __CSIM_cLine30_dirty = 1, RETURN from __CSIM_Store , CALL __VERIFIER_nondet_char)
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (smack:ext:__SMACK_nondet_char = 1)
+/usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (x = 1)
+/usr/local/share/smack/lib/smack.c(73,21): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,23): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,39): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,41): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (CALL __VERIFIER_assume)
+/usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(34,21): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(35,1): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (RETURN from __VERIFIER_assume )
+/usr/local/share/smack/lib/smack.c(74,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  (RETURN from __VERIFIER_nondet_char , smack:ext:__VERIFIER_nondet_char = 1, y = 1, CALL __CSIM_Store, __CSIM_cLine00_rank = 1, __CSIM_cLine01_rank = 1, __CSIM_cLine02_rank = 1, __CSIM_cLine03_rank = 1, __CSIM_num_Store_miss = 2, __CSIM_Store_ret = 0, __CSIM_cLine00_taken = 1, __CSIM_cLine00_tags = 24593, __CSIM_cLine00_rank = 0, __CSIM_cLine00_dirty = 1, RETURN from __CSIM_Store , CALL __CSIM_Load, __CSIM_cLine00_rank = 1, __CSIM_cLine01_rank = 2, __CSIM_cLine02_rank = 2, __CSIM_cLine03_rank = 2, __CSIM_num_Load_hit = 1, __CSIM_cLine00_rank = 0, __CSIM_Load_ret = 1, RETURN from __CSIM_Load , CALL __CSIM_Load, __CSIM_cLine30_rank = 1, __CSIM_cLine31_rank = 2, __CSIM_cLine32_rank = 2, __CSIM_cLine33_rank = 2, __CSIM_num_Load_hit = 2, __CSIM_cLine30_rank = 0, __CSIM_Load_ret = 1, RETURN from __CSIM_Load , CALL __CSIM_Load, __CSIM_cLine00_rank = 1, __CSIM_cLine01_rank = 3, __CSIM_cLine02_rank = 3, __CSIM_cLine03_rank = 3, __CSIM_num_Load_hit = 3, __CSIM_cLine00_rank = 0, __CSIM_Load_ret = 1, RETURN from __CSIM_Load , CALL __VERIFIER_assert)
+/usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(40,21): Trace: Thread=1  ()
+/usr/local/share/smack/lib/smack.c(40,21): Trace: Thread=1  (ASSERTION FAILS assert $i0 != $0;
+ )
+
+Boogie verification time: 6.43 s
+Time spent reading-writing programs: 11.89 s
+
+Time spent checking a program (9): 6.46 s
+Time spent checking a path (25): 12.26 s
+
+Number of procedures inlined: 16
+Number of variables tracked: 9
+Total Time: 21.527631 s
+Total User CPU time: 1.33 s
+/usr/local/share/smack/lib/smack.c(40,1): This assertion can fail
+Execution trace:
+    /usr/local/share/smack/lib/smack.c(1782,3): Trace: Thread=1  (CALL $initialize, CALL __SMACK_static_init, __CSIM_num_Load_hit = 0, __CSIM_num_Load_miss = 0, __CSIM_num_Store_hit = 0, __CSIM_num_Store_miss = 0, __CSIM_Load_ret = 0, __CSIM_Store_ret = 0, __CSIM_cLine00_tags = 0, __CSIM_cLine01_tags = 0, __CSIM_cLine02_tags = 0, __CSIM_cLine03_tags = 0, __CSIM_cLine10_tags = 0, __CSIM_cLine11_tags = 0, __CSIM_cLine12_tags = 0, __CSIM_cLine13_tags = 0, __CSIM_cLine20_tags = 0, __CSIM_cLine21_tags = 0, __CSIM_cLine22_tags = 0, __CSIM_cLine23_tags = 0, __CSIM_cLine30_tags = 0, __CSIM_cLine31_tags = 0, __CSIM_cLine32_tags = 0, __CSIM_cLine33_tags = 0, __CSIM_cLine00_rank = 0, __CSIM_cLine01_rank = 0, __CSIM_cLine02_rank = 0, __CSIM_cLine03_rank = 0, __CSIM_cLine10_rank = 0, __CSIM_cLine11_rank = 0, __CSIM_cLine12_rank = 0, __CSIM_cLine13_rank = 0, __CSIM_cLine20_rank = 0, __CSIM_cLine21_rank = 0, __CSIM_cLine22_rank = 0, __CSIM_cLine23_rank = 0, __CSIM_cLine30_rank = 0, __CSIM_cLine31_rank = 0, __CSIM_cLine32_rank = 0, __CSIM_cLine33_rank = 0, __CSIM_cLine00_taken = 0, __CSIM_cLine01_taken = 0, __CSIM_cLine02_taken = 0, __CSIM_cLine03_taken = 0, __CSIM_cLine10_taken = 0, __CSIM_cLine11_taken = 0, __CSIM_cLine12_taken = 0, __CSIM_cLine13_taken = 0, __CSIM_cLine20_taken = 0, __CSIM_cLine21_taken = 0, __CSIM_cLine22_taken = 0, __CSIM_cLine23_taken = 0, __CSIM_cLine30_taken = 0, __CSIM_cLine31_taken = 0, __CSIM_cLine32_taken = 0, __CSIM_cLine33_taken = 0, __CSIM_cLine00_dirty = 0, __CSIM_cLine01_dirty = 0, __CSIM_cLine02_dirty = 0, __CSIM_cLine03_dirty = 0, __CSIM_cLine10_dirty = 0, __CSIM_cLine11_dirty = 0, __CSIM_cLine12_dirty = 0, __CSIM_cLine13_dirty = 0, __CSIM_cLine20_dirty = 0, __CSIM_cLine21_dirty = 0, __CSIM_cLine22_dirty = 0, __CSIM_cLine23_dirty = 0, __CSIM_cLine30_dirty = 0, __CSIM_cLine31_dirty = 0, __CSIM_cLine32_dirty = 0, __CSIM_cLine33_dirty = 0, x = 0, y = 0, t = 0, RETURN from __SMACK_static_init , CALL __SMACK_init_func_memory_model)
+    /usr/local/share/smack/lib/smack.c(1782,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(1787,1): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (RETURN from __SMACK_init_func_memory_model , RETURN from $initialize , smack:entry:main = -95891, CALL __CSIM_MAIN__, CALL __CSIM_init_cache, __CSIM_num_Load_hit = 0, __CSIM_num_Load_miss = 0, __CSIM_num_Store_hit = 0, __CSIM_num_Store_miss = 0, __CSIM_Load_ret = 0, __CSIM_Store_ret = 0, __CSIM_cLine00_tags = 0, __CSIM_cLine01_tags = 0, __CSIM_cLine02_tags = 0, __CSIM_cLine03_tags = 0, __CSIM_cLine10_tags = 0, __CSIM_cLine11_tags = 0, __CSIM_cLine12_tags = 0, __CSIM_cLine13_tags = 0, __CSIM_cLine20_tags = 0, __CSIM_cLine21_tags = 0, __CSIM_cLine22_tags = 0, __CSIM_cLine23_tags = 0, __CSIM_cLine30_tags = 0, __CSIM_cLine31_tags = 0, __CSIM_cLine32_tags = 0, __CSIM_cLine33_tags = 0, __CSIM_cLine00_rank = 0, __CSIM_cLine01_rank = 0, __CSIM_cLine02_rank = 0, __CSIM_cLine03_rank = 0, __CSIM_cLine10_rank = 0, __CSIM_cLine11_rank = 0, __CSIM_cLine12_rank = 0, __CSIM_cLine13_rank = 0, __CSIM_cLine20_rank = 0, __CSIM_cLine21_rank = 0, __CSIM_cLine22_rank = 0, __CSIM_cLine23_rank = 0, __CSIM_cLine30_rank = 0, __CSIM_cLine31_rank = 0, __CSIM_cLine32_rank = 0, __CSIM_cLine33_rank = 0, __CSIM_cLine00_taken = 0, __CSIM_cLine01_taken = 0, __CSIM_cLine02_taken = 0, __CSIM_cLine03_taken = 0, __CSIM_cLine10_taken = 0, __CSIM_cLine11_taken = 0, __CSIM_cLine12_taken = 0, __CSIM_cLine13_taken = 0, __CSIM_cLine20_taken = 0, __CSIM_cLine21_taken = 0, __CSIM_cLine22_taken = 0, __CSIM_cLine23_taken = 0, __CSIM_cLine30_taken = 0, __CSIM_cLine31_taken = 0, __CSIM_cLine32_taken = 0, __CSIM_cLine33_taken = 0, __CSIM_cLine00_dirty = 0, __CSIM_cLine01_dirty = 0, __CSIM_cLine02_dirty = 0, __CSIM_cLine03_dirty = 0, __CSIM_cLine10_dirty = 0, __CSIM_cLine11_dirty = 0, __CSIM_cLine12_dirty = 0, __CSIM_cLine13_dirty = 0, __CSIM_cLine20_dirty = 0, __CSIM_cLine21_dirty = 0, __CSIM_cLine22_dirty = 0, __CSIM_cLine23_dirty = 0, __CSIM_cLine30_dirty = 0, __CSIM_cLine31_dirty = 0, __CSIM_cLine32_dirty = 0, __CSIM_cLine33_dirty = 0, RETURN from __CSIM_init_cache , CALL __VERIFIER_nondet_char)
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (smack:ext:__SMACK_nondet_char = -128)
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (x = -128)
+    /usr/local/share/smack/lib/smack.c(73,21): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,23): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,39): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,41): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (CALL __VERIFIER_assume)
+    /usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(34,21): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(35,1): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (RETURN from __VERIFIER_assume )
+    /usr/local/share/smack/lib/smack.c(74,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (RETURN from __VERIFIER_nondet_char , smack:ext:__VERIFIER_nondet_char = -128, x = -128, CALL __CSIM_Store, __CSIM_cLine30_rank = 1, __CSIM_cLine31_rank = 1, __CSIM_cLine32_rank = 1, __CSIM_cLine33_rank = 1, __CSIM_num_Store_miss = 1, __CSIM_Store_ret = 0, __CSIM_cLine30_taken = 1, __CSIM_cLine30_tags = 24592, __CSIM_cLine30_rank = 0, __CSIM_cLine30_dirty = 1, RETURN from __CSIM_Store , CALL __VERIFIER_nondet_char)
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (smack:ext:__SMACK_nondet_char = 1)
+    /usr/local/share/smack/lib/smack.c(72,12): Trace: Thread=1  (x = 1)
+    /usr/local/share/smack/lib/smack.c(73,21): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,23): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,39): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,41): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,36): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (CALL __VERIFIER_assume)
+    /usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(34,21): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(35,1): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(73,3): Trace: Thread=1  (RETURN from __VERIFIER_assume )
+    /usr/local/share/smack/lib/smack.c(74,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  (RETURN from __VERIFIER_nondet_char , smack:ext:__VERIFIER_nondet_char = 1, y = 1, CALL __CSIM_Store, __CSIM_cLine00_rank = 1, __CSIM_cLine01_rank = 1, __CSIM_cLine02_rank = 1, __CSIM_cLine03_rank = 1, __CSIM_num_Store_miss = 2, __CSIM_Store_ret = 0, __CSIM_cLine00_taken = 1, __CSIM_cLine00_tags = 24593, __CSIM_cLine00_rank = 0, __CSIM_cLine00_dirty = 1, RETURN from __CSIM_Store , CALL __CSIM_Load, __CSIM_cLine00_rank = 1, __CSIM_cLine01_rank = 2, __CSIM_cLine02_rank = 2, __CSIM_cLine03_rank = 2, __CSIM_num_Load_hit = 1, __CSIM_cLine00_rank = 0, __CSIM_Load_ret = 1, RETURN from __CSIM_Load , CALL __CSIM_Load, __CSIM_cLine30_rank = 1, __CSIM_cLine31_rank = 2, __CSIM_cLine32_rank = 2, __CSIM_cLine33_rank = 2, __CSIM_num_Load_hit = 2, __CSIM_cLine30_rank = 0, __CSIM_Load_ret = 1, RETURN from __CSIM_Load , CALL __CSIM_Load, __CSIM_cLine00_rank = 1, __CSIM_cLine01_rank = 3, __CSIM_cLine02_rank = 3, __CSIM_cLine03_rank = 3, __CSIM_num_Load_hit = 3, __CSIM_cLine00_rank = 0, __CSIM_Load_ret = 1, RETURN from __CSIM_Load , CALL __VERIFIER_assert)
+    /usr/local/share/smack/lib/smack.c(260,3): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(40,21): Trace: Thread=1  ()
+    /usr/local/share/smack/lib/smack.c(40,21): Trace: Thread=1  (ASSERTION FAILS assert $i0 != $0;
+

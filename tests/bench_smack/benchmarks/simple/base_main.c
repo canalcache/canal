@@ -16,27 +16,29 @@
 #define N 10
 
 //extern unsigned int __VERIFIER_nondet_uint();
-unsigned int n __attribute__ ((aligned (64)));
 unsigned int i __attribute__ ((aligned (64)));
+unsigned int n __attribute__ ((aligned (64)));
 unsigned int sn __attribute__ ((aligned (64)));
+unsigned int k __attribute__ ((aligned (64)));
 
 
-void __CSIM_MAIN__(unsigned int tmp)
+void __CSIM_MAIN__()
 {
-    n = 10;
-	sn  = 0;
-    i = tmp;
+    //__CSIM_init_cache();
 
-    for (; i<=n; i++) {
+    //n = __VERIFIER_nondet_uint();
+    n = 10;
+    sn = 0;
+
+    for (i=0; i<=n; i++) {
         sn = sn + i;
         //assert(__CSIM_write_ret == false);  // expect: violated
     }
 
 }
 
-int main() 
+int main ( ) 
 {
-	unsigned int i1, i2;
-    __CSIM_MAIN__(i2);
+    __CSIM_MAIN__();
     return 0;
 }

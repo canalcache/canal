@@ -1,3 +1,0 @@
-Error: ASSERTION FAIL: writemiss1 == writemiss2
-Stack: 
-	#000034172 in main ()

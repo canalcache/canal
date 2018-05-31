@@ -19,10 +19,12 @@
 
 int a[SIZE] __attribute__ ((aligned (64)));
 int i __attribute__ ((aligned (64)));
+int multi __attribute__ ((aligned (64)));
 int non_det_int();
 
-void __CSIM_MAIN__(int multi)
+void __CSIM_MAIN__(int tmp)
 {
+    multi = tmp;
     i = 0;
 	while (i < SIZE) {
 		a[i] = 1;
@@ -31,7 +33,7 @@ void __CSIM_MAIN__(int multi)
 
 	i = 0;
     while ( i < N ) {
-        if ((i % (multi + 1)) == 0) {
+        if ((i % 3) == 0) {
             a[i] = 42;
         } else {
             a[i*multi] = 42;
@@ -46,9 +48,9 @@ int main() {
 	klee_make_symbolic(&a, sizeof(int), "a");
 	klee_make_symbolic(&b, sizeof(int), "b");
 	klee_assume(a != b);
-	klee_assume(a <= 16);
+	klee_assume(a < 16);
 	klee_assume(a >= 0);
-	klee_assume(b <= 16);
+	klee_assume(b < 16);
 	klee_assume(b >= 0);
 
 	__CSIM_init_cache();

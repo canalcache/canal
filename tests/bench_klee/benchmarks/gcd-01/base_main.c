@@ -6,45 +6,15 @@
  * The file name is c/bitvector/gcd_1_true-unreach-call_true-no-overflow.c
  */
 
-//extern void VERIFIER_error() __attribute__ ((__noreturn__));
-
-//extern char __VERIFIER_nondet_char(void);
-/*
-void __VERIFIER_assert(int cond) {
-    if (!(cond)) {
-        ERROR: __VERIFIER_error();
-    }
-    return;
-}
-*/
-
-// inlined
-/*
-signed char gcd_test(signed char a, signed char b)
-{
-    signed char t;
-
-    if (a < 0) a = -a;
-    if (b < 0) b = -b;
-
-    while (b != 0) {
-        t = b;
-        b = a % b;
-        a = t;
-    }
-    return a;
-}
-*/
 
 signed char t __attribute__ ((aligned (64)));
+signed char x __attribute__ ((aligned (64)));
+signed char y __attribute__ ((aligned (64)));
 
-
-void __CSIM_MAIN__(signed char x, signed char y)
+void __CSIM_MAIN__(signed char xt, signed char yt)
 {
-    //__CSIM_init_cache();
-
-    //x = __VERIFIER_nondet_char();
-    //y = __VERIFIER_nondet_char();
+    x = xt;
+    y = yt;
 
     if (y > 0 && x % y == 0) {
         //g = gcd_test(x, y);
@@ -56,26 +26,16 @@ void __CSIM_MAIN__(signed char x, signed char y)
             y = x % y;
             x = t;
         }
-
-        // omitted assertion check part. Instead, check cache variables.
-
-        /*
-        __CRAB_assert(__CSIM_num_write_access > 1);
-        __CRAB_assert(__CSIM_num_write_hit > 1);
-        __CRAB_assert(__CSIM_num_write_miss > 1);
-        __CRAB_assert(__CSIM_num_read_access > 1);
-        __CRAB_assert(__CSIM_num_read_hit > 1);
-        __CRAB_assert(__CSIM_num_read_miss > 1);
-        */
-
-        //__VERIFIER_assert(g == y);
     }
 }
 
 
 int main()
 {
-	signed char x, y;
-    __CSIM_MAIN__(x, y);
+	signed char x1, y1, x2, y2;
+	unsigned int access1, miss1, access2, miss2;
+    __CSIM_MAIN__(x1, y1);
+    __CSIM_MAIN__(x2, y2);
+
     return 0;
 }

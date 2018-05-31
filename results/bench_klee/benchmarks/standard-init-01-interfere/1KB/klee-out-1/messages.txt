@@ -1,4 +1,0 @@
-KLEE: Using STP solver backend
-KLEE: ERROR: (location information missing) ASSERTION FAIL: writemiss1 == writemiss2
-KLEE: NOTE: now ignoring this error at this location
-KLEE: halting execution, dumping remaining states

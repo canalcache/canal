@@ -46,8 +46,8 @@ void __CSIM_MAIN__(int p)
 
     for ( i = 0 ; i < N ; i++ ) {
         if (a1[i] != a2[i]) {
-			a2[199] = 5;
             a2[199] = a1[i];
+			a2[199] = 5;
 		} else {
             a2[199] = a1[i];
 			a2[199] = 5;

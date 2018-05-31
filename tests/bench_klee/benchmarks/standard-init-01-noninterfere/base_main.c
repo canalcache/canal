@@ -18,6 +18,7 @@
 
 int a[200] __attribute__ ((aligned (64)));
 int i __attribute__ ((aligned (64)));
+int multi __attribute__ ((aligned (64)));
 
 void __CSIM_MAIN__()
 {

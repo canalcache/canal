@@ -20,13 +20,15 @@ extern unsigned int __VERIFIER_nondet_uint();
 extern int nd();
 
 unsigned int n __attribute__ ((aligned (64)));
+unsigned int i __attribute__ ((aligned (64)));
 unsigned int sn __attribute__ ((aligned (64)));
 
 
-void __CSIM_MAIN__(unsigned int i)
+void __CSIM_MAIN__(unsigned int tmp)
 {
     n = 5;
     sn = 0;
+    i = tmp;
 
     for (; i<=n; i++) {
         sn = sn + i;
